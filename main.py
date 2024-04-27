@@ -28,7 +28,7 @@ def calculate_function():
                 answerFound = True
     if not answerFound:
         qty = smallestDiffQty
-        unitPrice = smallestDiffUnitPrice
+        unitPrice = round(smallestDiffUnitPrice, 2)
     quantity.configure(text=qty)
     price.configure(text=unitPrice)
 
@@ -45,16 +45,16 @@ calculate_button = customtkinter.CTkButton(master=window, text="Calculate", comm
 calculate_button.grid(column=0, row=1, columnspan=3, padx=20, pady=20)
 
 quantity_result_text = customtkinter.CTkLabel(window, text="Quantity", fg_color="transparent")
-quantity_result_text.grid(column=0, row=2, padx=20, pady=20)
+quantity_result_text.grid(column=0, row=3, padx=20, pady=20)
 
 price_result_text = customtkinter.CTkLabel(window, text="Price", fg_color="transparent")
-price_result_text.grid(column=0, row=3, padx=20, pady=20)
+price_result_text.grid(column=0, row=2, padx=20, pady=20)
 
 quantity = customtkinter.CTkLabel(window, text="", fg_color="transparent")
-quantity.grid(column=1, row=2, padx=20, pady=20)
+quantity.grid(column=1, row=3, padx=20, pady=20)
 
 price = customtkinter.CTkLabel(window, text="", fg_color="transparent")
-price.grid(column=1, row=3, padx=20, pady=20)
+price.grid(column=1, row=2, padx=20, pady=20)
 
 window.mainloop()
 
